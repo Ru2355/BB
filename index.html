@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Timer Screen -->
+    <div id="timerScreen" class="screen active">
+        <div class="timer-container">
+            <h1>🎂 Birthday Surprise in...</h1>
+            <div class="timer">
+                <span id="hours">00</span>:<span id="minutes">02</span>:<span id="seconds">02</span>
+            </div>
+            <p class="timer-text">Get Ready! 🎉</p>
+        </div>
+    </div>
+
+    <!-- Lock Screen -->
+    <div id="lockScreen" class="screen">
+        <div class="lock-container">
+            <h1>🔒 Unlock the Surprise</h1>
+            <p>Enter the PIN to reveal the birthday message!</p>
+            
+            <div class="pin-display">
+                <span id="pinDisplay">****</span>
+            </div>
+
+            <!-- Numeric Keypad -->
+            <div class="keypad">
+                <button class="key" onclick="addPin('1')">1</button>
+                <button class="key" onclick="addPin('2')">2</button>
+                <button class="key" onclick="addPin('3')">3</button>
+                <button class="key" onclick="addPin('4')">4</button>
+                <button class="key" onclick="addPin('5')">5</button>
+                <button class="key" onclick="addPin('6')">6</button>
+                <button class="key" onclick="addPin('7')">7</button>
+                <button class="key" onclick="addPin('8')">8</button>
+                <button class="key" onclick="addPin('9')">9</button>
+                <button class="key clear" onclick="clearPin()">C</button>
+                <button class="key" onclick="addPin('0')">0</button>
+                <button class="key delete" onclick="deletePin()">⌫</button>
+            </div>
+
+            <div id="lockError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Celebration Screen -->
+    <div id="celebrationScreen" class="screen">
+        <canvas id="confetti"></canvas>
+        <div class="celebration-container">
+            <h1 class="happy-text">🎉 Happy 24th Birthday Buddy! 🎉</h1>
+            <p class="birthday-message">Wishing you an amazing day filled with joy and happiness!</p>
+            <div class="balloons">
+                <div class="balloon red"></div>
+                <div class="balloon blue"></div>
+                <div class="balloon yellow"></div>
+                <div class="balloon green"></div>
+                <div class="balloon purple"></div>
+            </div>
+            <button class="restart-btn" onclick="location.reload()">Play Again 🎂</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
